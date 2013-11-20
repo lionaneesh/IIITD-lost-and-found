@@ -1,0 +1,388 @@
+@charset "utf-8"; /* CSS Document */
+body {
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
+	background-color: #EAEAEA;
+	width: auto;
+}
+
+#header {
+	background: #333;
+	width: 102%;
+	height: 6em;
+	margin-top: -3.1em;
+	margin-left: -1em;
+}
+
+#headText {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color: #FFF;
+	font-size: 50px;
+	position: relative;
+	left: 2em;
+	top: 0.18em;
+	background-color: #333;
+	width: 3em;
+	padding: 0.5em 1em 0.5em 1em; /*box-shadow: #000 5px 5px 40px;
+	
+	 */
+letter-spacing: 1.5px;
+	border-radius: 0.2em;
+}
+
+#iiitLogo {
+	position: relative;
+	left: 85%;
+	top: -12em;
+	background-color: #333;
+	padding: 2em; /*box-shadow: #000 5px 5px 20px;
+	
+	 */
+border-radius: 0.2em;
+}
+
+#topSearch {
+	position: relative;
+	left: 65%;
+	top: -29.0em;
+}
+
+#searchLogo {
+	position: relative;
+	left: -4em;
+	top: -1em;
+}
+
+#circle {
+	width: 1em;
+	height: 1em;
+	background-color: #FFF;
+	border-radius: 200em;
+	position: relative;
+	left: 2em;
+	top: 0.5em;
+}
+
+#handle {
+	width: 1.2em;
+	height: 0.4em;
+	background-color: #FFF;
+	border-bottom-left-radius: 5em;
+	border-top-left-radius: 5em;
+
+	-webkit-transform: rotate(-50deg);
+	-moz-transform: rotate(-50deg);
+	-o-transform: rotate(-50deg);
+	-ms-transform: rotate(-50deg);
+	transform: rotate(-50deg);
+	position: relative;
+	top: 0.4em;
+	left: 1.45em;
+}
+
+#search {
+	width: 10em;
+
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	-o-transition: width 0.5s;
+	-ms-transition: width 0.5s;
+	transition: width 0.5s;
+	outline: none;
+	border: none;
+	position: relative;
+	top: -2em;
+	height: 1.8em;
+}
+
+#search:focus {
+	width: 20em;
+	border: none;
+	outline: 0;
+}
+
+#belowHead {
+	list-style-type: none;
+	width: 102%;
+	margin-left: -1em;
+	background-color: #FFF;
+	height: 25em;
+	margin-top: -1em;
+	overflow: hidden;
+}
+
+#belowHead li {
+	display: inline-block;
+	color: #FFF;
+	font-size: 100px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	height: 25em;
+}
+
+#lostBlock {
+	background-color: #fd8d68;
+	width: 52%;
+	margin-left: -0.4em;
+
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	transition: background-color 1s;
+}
+
+#foundBlock {
+	background-color: #799df2;
+	width: 48.5%;
+	margin-left: -0.1em;
+
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	transition: background-color 1s;
+}
+
+#lostBlock:hover {
+	background-color: #F63;
+}
+
+#foundBlock:hover {
+	background-color: #4F80F2;
+}
+
+#lostBlock p {
+	margin-top: 2em;
+	margin-left: 4em;
+}
+
+#foundBlock p {
+	margin-top: 2em;
+	margin-left: 1em;
+}
+
+#recLost {
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 4em;
+	margin-left: -10em;
+	margin-top: -0.3em;
+	color: #666;
+}
+
+#lostList {
+	list-style-type: none;
+}
+
+#lostList li {
+	display: inline-block;
+	padding: 1em;
+	background-color: #FFF;
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 1.6em;
+	color: #666;
+
+	-webkit-transition: background-color .5s,color .5s;
+	-moz-transition: background-color .5s,color .5s;
+	-o-transition: background-color .5s,color .5s;
+	-ms-transition: background-color .5s,color .5s;
+	transition: background-color .5s,color .5s;
+}
+
+#lostList li:hover {
+	background-color: #F63;
+	color: #FFF;
+}
+
+#lostList li img {
+	width: 5.5em;
+	height: 5.5em;
+	padding: 0.3em 0.3em 0em 0.3em;
+}
+
+#lostList li div {
+	font-size: 0.6em;
+	width: 11em;
+
+	-ms-overflow-y: scroll;
+	overflow-y: scroll;
+	text-align: left;
+	height: 5em;
+	margin-top: 2em;
+	letter-spacing: 1px;
+}
+
+#recentFound {
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 4em;
+	margin-left: -9em;
+	margin-top: 1em;
+	color: #666;
+}
+
+#foundList {
+	list-style-type: none;
+	margin-top: 1.5em;
+}
+
+#foundList li {
+	display: inline-block;
+	padding: 1em;
+	background-color: #FFF;
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 1.6em;
+	color: #666;
+
+	-webkit-transition: background-color .5s,color .5s;
+	-moz-transition: background-color .5s,color .5s;
+	-o-transition: background-color .5s,color .5s;
+	-ms-transition: background-color .5s,color .5s;
+	transition: background-color .5s,color .5s;
+}
+
+#foundList li:hover {
+	background-color: #799df2;
+	color: #FFF;
+}
+
+#foundList li img {
+	width: 5.5em;
+	height: 5.5em;
+	padding: 0.3em 0.3em 0em 0.3em;
+}
+
+#foundList li div {
+	font-size: 0.6em;
+	width: 11em;
+
+	-ms-overflow-y: scroll;
+	overflow-y: scroll;
+	text-align: left;
+	height: 5em;
+	margin-top: 2em;
+	letter-spacing: 1px;
+}
+
+#footer {
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	background: #333;
+	width: 102%;
+	height: 10em;
+	margin-left: -1em;
+	margin-top: 6em;
+}
+
+#footer p {
+	color: #CCC;
+	text-align: center;
+	letter-spacing: .8px;
+	position: relative;
+	top: 2em;
+	font-size: 18px;
+}
+
+#footer p span {
+	color: #F90;
+}
+
+#lostFormContainer {
+	width: 85%;
+	background-color: #FFF;
+
+	-webkit-box-shadow: #999 0px 5px 10px;
+	box-shadow: #999 0px 5px 10px;
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	margin-top: -103em;
+	height: 43em;
+	position: relative; /*top: -104em;
+	*/
+left: 100%;
+
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+	-o-transition: left 1s;
+	-ms-transition: left 1s;
+	transition: left 1s;
+	border-top-style: solid;
+	border-top-width: 1em;
+	border-top-color: #F63;
+	border-bottom-style: solid;
+	border-bottom-width: 1em;
+	border-bottom-color: #F63;
+}
+
+#foundFormContainer {
+	width: 85%;
+	background-color: #FFF;
+
+	-webkit-box-shadow: #999 0px 5px 10px;
+	box-shadow: #999 0px 5px 10px;
+	font-family: Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	margin-top: -43em;
+	height: 43em;
+	position: relative; /*top: -150em;
+	*/
+left: 100%;
+
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+	-o-transition: left 1s;
+	-ms-transition: left 1s;
+	transition: left 1s;
+	border-top-style: solid;
+	border-top-width: 1em;
+	border-top-color: #4F80F2;
+	border-bottom-style: solid;
+	border-bottom-width: 1em;
+	border-bottom-color: #4F80F2;
+}
+
+#buttons,#buttons1 {
+	list-style-type: none;
+	position: relative;
+	left: 40%;
+}
+
+#buttons li,#buttons1 li {
+	display: inline-block;
+	height: 5em;
+	width: 3em;
+}
+
+#close,#close1 {
+	background-color: #F33;
+}
+
+#reset,#reset1 {
+	background-color: #06F;
+}
+
+#submit,#submit1 {
+	background-color: #090;
+}
+
+#lostFormContainer table,#foundFormContainer table {
+	position: relative;
+	top: 0em;
+}
+
+#lostFormContainer table td,#foundFormContainer table td {
+	width: 15em;
+	padding: .6em;
+}
+
+textarea {
+	-webkit-resize: none;
+	-moz-resize: none;
+	resize: none;
+}
+
+#lostList li div::-webkit-scrollbar {
+	width: 8px;
+	background-color: #F7F7F7;
+	border-radius: 10px;
+}
+
+#lostList li div::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #D5D5D5;
+}

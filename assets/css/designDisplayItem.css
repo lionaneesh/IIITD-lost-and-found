@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+	{
+		overflow-x:hidden;
+		background-color:#EAEAEA;
+	}
+	
+
+#header
+	{
+		list-style-type:none;
+		width:102%;
+		margin-left:-1em;
+		background-color:#FFF;
+		height:2em;
+		margin-top:-1em;
+		overflow:hidden;
+	}
+#header li
+	{
+		display:inline-block;
+		color:#FFF;
+		font-size:100px;
+		font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+		height:2em;
+	}
+#orange
+	{
+		background-color:#fd8d68;
+		width:52%;
+		margin-left:-0.4em;
+	}
+	
+#blue
+	{
+		background-color:#799df2;
+		width:48.5%;
+		margin-left:-0.1em;
+	}
+	
+img
+	{
+		width:10em;
+		height:10em;
+		margin-top:2em;
+	}
+
+table
+	{
+		font-family:Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+		margin-top:1em;
+	}
+td 
+	{
+		background-color:#FFF;
+		padding:.5em 2em .5em 2em;
+		width:20em;
+	}

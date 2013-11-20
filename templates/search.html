@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Search Results</title>
+            <style type="text/css">
+                body
+                {
+                    overflow-x:hidden;
+                    background-color:#EAEAEA;
+                }
+
+
+                #header
+                {
+                    list-style-type:none;
+                    width:102%;
+                    margin-left:-1em;
+                    background-color:#FFF;
+                    height:2em;
+                    margin-top:-1em;
+                    overflow:hidden;
+                }
+                #header li
+                {
+                    display:inline-block;
+                    color:#FFF;
+                    font-size:100px;
+                    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+                    height:2em;
+                }
+                #orange
+                {
+                    background-color:#fd8d68;
+                    width:52%;
+                    margin-left:-0.4em;
+                }
+
+                #blue
+                {
+                    background-color:#799df2;
+                    width:48.5%;
+                    margin-left:-0.1em;
+                }
+
+                #topSearch
+                {
+                    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+                    color:#333;
+                    font-size:20px;
+                    position:relative;
+                    left:60%;
+                }
+                #search
+                {
+                    width:15em;
+                    -webkit-transition: width 0.5s;
+                    outline:none;
+                    border:none;
+                    height:2em;
+                    margin-left:2em;
+                    font-family:Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+                    font-size:15px;
+                }
+                table
+                {
+                    margin-top:5em;
+                    font-family:Segoe, "Segoe UI light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif
+                }
+                tr
+                {
+                    background-color:#FFF;
+                }
+                img
+                {
+                    width:5.5em;
+                    height:5.5em;
+                }
+                td
+                {
+                    padding:2em 3em 2em 3em;
+                    text-align:center;
+                }
+                </style>
+    </head>
+    
+    <body>
+        <ul id="header">
+            <li id="orange"></li>
+            <li id="blue"></li>
+        </ul>
+        
+        <form id="topSearch" method="get" action="/search">
+            Search: <input type="search" name="search" id="search">
+        </form>
+        
+        <div align="center">
+            <table id="searchResults">
+                <tr><td><b>Image</b></td><td><b>What</b></td><td><b>Short Description</b></td><td><b>Found/Lost</b></td></tr>
+                {% for i in items %}
+                <tr>
+                    <td><img src="/image?img_id={{i.item_id[0].value}}"></td>
+                    <td><a href="/items/{{i.item_id[0].value}}">{{i.what[0].value}}</a></h3>
+                    <td style="width:20em;overflow:scroll;">{{i.description[0].value}}</td>
+                        <td>{{i.foundlost[0].value}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

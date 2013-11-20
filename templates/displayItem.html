@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<link href="/assets/css/designDisplayItem.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Item Details</title>
+</head>
+
+<body>
+
+<ul id="header">
+<li id="orange"></li>
+<li id="blue"></li>
+</ul>
+<div align="center">
+    {% if item.image %}
+    <img src="/image?img_id={{item.key()}}"/></br></li>
+    {% else %}
+    <img src="/assets/img/RecentLost/1.jpg"/></br></li>
+    {% endif %}
+</div>
+<table align="center">
+    <tr><td><b>What:</b></td><td>{{item.what}}</td></tr>
+    <tr><td><b>Where:</b></td><td>{{item.where}}</td></tr>
+    <tr><td><b>When:</b></td><td>{{item.when}}</td></tr>
+    <tr><td><b>Your Name:</b></td><td>{{item.name}}</td></tr>
+    <tr><td><b>Email:</b></td><td>{{item.user.email()}}</td></tr>
+    <tr><td><b>Short Description:</b></td><td style="height:4em;overflow:scroll;">{{item.description}}</td></tr>
+    <tr><td><b>Other Notes:</b></td><td style="height:6em;overflow:scroll;">{{item.notes}}</td></tr>
+
+</table>
+
+</body>
+</html>

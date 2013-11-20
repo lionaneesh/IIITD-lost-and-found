@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Lost and Found | IIIT Delhi</title>
+<link href="/assets/css/designCross.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#foundList li div::-webkit-scrollbar 
+	{
+    	width: 8px;
+		background-color:#F7F7F7;
+		border-radius:10px;
+	}
+
+
+#foundList li div::-webkit-scrollbar-thumb 
+	{
+    	border-radius: 10px;
+		background-color:#D5D5D5; 
+	}
+
+    #lostList l1 {
+        width: 100px;
+    }
+
+    #foundList li {
+        width: 230px;
+        height: 350px;
+    }
+
+    #lostList li {
+        width: 230px;
+        height: 350px;
+    }
+    </style>
+<script language="javascript" type="text/javascript" src="/assets/js/designJS.js"></script>
+
+ 
+</head>
+
+<body>
+<div id="header">
+<a style="text-decoration: none;" href="http://iiitdlostandfound.appspot.com">
+<p id="headText">
+lost &
+<br/>found
+</p>
+    </a>
+
+
+<a href="http://iiitd.ac.in" target="_blank">
+<img src="/assets/img/IIITDlogotrans.png" id="iiitLogo"></a>
+</div>
+
+<ul id="belowHead">
+<li id="lostBlock" onClick="showLostForm()"><p>lost</p></li>
+<li id="foundBlock" onClick="showFoundForm()"><p>found</p></li>
+</ul>
+
+<form id="topSearch" action="/search">
+	<div id="searchLogo">
+	<div id="circle">
+	</div>
+
+	<div id="handle">
+	</div>
+    </div>
+    <input name="search" type="search" id="search">
+    <input type="hidden">
+</form>
+<div align="center">
+	<p id="recLost">
+	Recently lost
+	</p>
+	<ul id="lostList">
+    {% for l in lost %}
+    <a href="/items/{{l.key()}}">
+    <li>{{ l.what }}</br>
+    
+    {% if l.image %}
+    <img src="/image?img_id={{l.key()}}"/></br><div>{{ l.description }}</div></li>
+    {% else %}
+    <img src="/assets/img/RecentLost/1.jpg"/></br><div>{{ l.description }}</div></li>
+    {% endif %}
+    </a>
+    {% endfor %}
+	</ul>
+</div>
+
+<div align="center">
+	<p id="recentFound">
+	Recently found
+	</p>
+	<ul id="foundList">
+    {% for f in found %}
+    <a href="/items/{{f.key()}}"><li>{{ f.what }}</br>
+    
+    {% if f.image %}
+    <img src="/image?img_id={{f.key()}}"/></br><div>{{ f.description }}</div></li>
+    {% else %}
+    <img src="/assets/img/RecentLost/1.jpg"/></br><div>{{ f.description }}</div></li>
+    {% endif %}
+    </a>
+	{% endfor %}
+
+	</ul>
+</div>
+
+<div id="footer">
+<p>
+This was made by <span>Tushar</span> Gupta, <span>Aneesh</span> Dogra & <span>Manav</span> Batra as a part of the <span>System Management Mini Project</span><br><br>Because your <span>belongings</span> belong to you
+</p>
+</div>
+
+<div align="center">
+<div id="lostFormContainer">
+<ul id="buttons">
+<li id="submit" onClick="submitLostForm()">
+</li>
+<li id="reset" onClick="resetLostForm()">
+</li>
+<li id="close" onClick="hideLostForm()">
+</li>
+</ul>
+<table>
+<form id="lostForm" method="post" enctype="multipart/form-data" action="/submit">
+<tr><td>What:</td><td><input  name="what" type="text"></td></tr>
+<tr><td>Where:</td><td><input  name="where" type="text"></td></tr>
+<tr><td>When:</td><td><input  name="when" type="date"></td></tr>
+<tr><td>Your Name:</td><td><input  name="name" type="text"></td></tr>
+<tr><td>Upload Image:</td><td><input  name="image" type="file"></td></tr>
+<tr><td>Short Description:</td><td><textarea  name="desc" rows="6" cols="25"></textarea></td></tr>
+<tr><td>Other Notes:</td><td><textarea  name="notes" rows="7" cols="25"></textarea></td></tr>
+<tr><td><input type="hidden" name="lost" value="lost"></td></tr>
+</form>
+</table>
+</div>
+</div>
+
+<div align="center">
+<div id="foundFormContainer">
+<ul id="buttons1">
+<li id="submit1" onClick="submitFoundForm()">
+</li>
+<li id="reset1" onClick="resetFoundForm()">
+</li>
+<li id="close1" onClick="hideFoundForm()">
+</li>
+</ul>
+<table>
+<form method="post" id="foundForm" enctype="multipart/form-data" action="/submit">
+<tr><td>What:</td><td><input name="what" type="text"></td></tr>
+<tr><td>Where:</td><td><input  name="where" type="text"></td></tr>
+<tr><td>When:</td><td><input  name="when" type="date"></td></tr>
+<tr><td>Your Name:</td><td><input  name="name" type="text"></td></tr>
+<tr><td>Upload Image:</td><td><input  name="image" type="file"></td></tr>
+<tr><td>Short Description:</td><td><textarea  name="desc" rows="6" cols="25"></textarea></td></tr>
+<tr><td>Other Notes:</td><td><textarea  name="notes" rows="7" cols="25"></textarea></td></tr>
+<tr><td><input type="hidden" name="found" value="found"></td></tr>
+</form>
+</table>
+</div>
+</div>
+
+</body>
+</html>
